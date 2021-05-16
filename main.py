@@ -190,22 +190,16 @@ class ConfigWindow(tk.Toplevel):
 
     
     def assignColors(self, findAverage):
-        if findAverage >= 1 and findAverage <= 1.5:
+        if findAverage >= 1 and findAverage <= 1.8:
             return("#CC0000")
-        elif findAverage > 1.5 and findAverage <= 2:
-            return("#FF3333")
-        elif findAverage > 2 and findAverage <= 2.5:
+        elif findAverage > 1.8 and findAverage <= 2.6:
             return("#FF8000")
-        elif findAverage > 2.5 and findAverage <= 3:
-            return("#FFB266")
-        elif findAverage > 3 and findAverage <= 3.5:
-            return("#999900")
-        elif findAverage > 3.5 and findAverage <= 4:
-            return("#FFFF33")
-        elif findAverage > 4 and findAverage <= 4.5:
-            return("#80FF00")
-        elif findAverage > 4.5 and findAverage <= 5:
-            return("#009900")
+        elif findAverage > 2.6 and findAverage <= 3.4:
+            return("#ffff00")
+        elif findAverage > 3.4 and findAverage <= 4.2:
+            return("#33cc33")
+        elif findAverage > 4.2 and findAverage <= 5:
+            return("#1F51FF")
 
 class App(ThemedTk):
     def __init__(self):
@@ -223,20 +217,15 @@ class App(ThemedTk):
         self.calendar = CalendarPage(tabs, self)
         tabs.add(self.calendar, text="Calendar")
         resource = Resources(tabs, self)
-        tabs.add(resource, text="Resource")
-        
+        tabs.add(resource, text="Resources")
         
         tabs.pack()
         return tabs
     
     def updateCalendar(self):
         self.calendar.destroy()
-        cal = CalendarPage(self.nb, self)
-        self.calendar = self.nb.add(cal, text="Calendar")
-
-
-
-
+        self.calendar = CalendarPage(self.nb, self)
+        self.nb.add(self.calendar, text="Calendar")
 
 app = App()
 app.mainloop()
