@@ -2,7 +2,7 @@
 This was made at hths.hacks() 2021 in 24 hours
 
 # Requirements
-Tkinter, ttkthemes, requests
+Tkinter, ttkthemes, requests, webbrowser
 
 # Inspiration
 We are all involved in an organization called "Active Minds" which helps to educate people about and destigmatize mental health.
