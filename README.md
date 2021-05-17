@@ -11,7 +11,7 @@ We are all involved in an organization called "Active Minds" which helps to educ
 Users take a short quiz to determine how their day went to track long-term trends in their mental health, which can be accessed through a calendar.
 
 # How we built it
-We used Python and JSON for the backend with Tkinter for the GUI. We also used requests to show user a daily quote.
+We used Python and JSON for the backend with Tkinter for the GUI, as well as requests to show user a daily quote.
 
 # Challenges we ran into
 At first, we thought we could just create a quiz with a calendar, but soon realized we would need a method to store users' previous inputs. Had to use store and get data on a JSON file
